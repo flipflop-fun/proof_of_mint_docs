@@ -27,7 +27,6 @@
 | 📋 **Markdown 版本** | 便于在 GitHub 上阅读的 Markdown 格式 | [📖 阅读 MD](./proof_of_mint_v1.1_zh.md) |
 | 🌐 **交互式版本 (HTML)** | 在线阅读版本，支持交互式图表和公式 | [🔗 在线阅读](./proof_of_mint_v1.1_zh.html) |
 | 📄 **最新论文 (PDF)** | 完整的学术论文，包含所有技术细节和数学证明 ||
-| 📝 **源码 (R Markdown)** | 可重现的研究源码，包含所有计算和图表生成代码 | [📂 查看源码](./proof_of_mint_v1.1_zh.Rmd) |
 
 
 ### ❓ 常见问题

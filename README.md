@@ -27,7 +27,6 @@
 | 📋 **Markdown Version** | GitHub-friendly Markdown format for easy reading | [📖 Read MD](./proof_of_mint_v1.1.md) |
 | 🌐 **Interactive Version (HTML)** | Online reading version with interactive charts and formulas | [🔗 Read Online](./proof_of_mint_v1.1.html) |
 | 📄 **Latest Paper (PDF)** | Complete academic paper with all technical details and mathematical proofs | [📥 Download PDF](./proof_of_mint_v1.1.pdf) |
-| 📝 **Source Code (R Markdown)** | Reproducible research source code with all computations and chart generation | [📂 View Source](./proof_of_mint_v1.1.Rmd) |
 
 
 ### ❓ Frequently Asked Questions
