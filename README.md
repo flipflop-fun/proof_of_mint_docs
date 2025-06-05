@@ -4,6 +4,7 @@
 
 ## A Revolutionary Decentralized Token Minting Mechanism
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/flipflop-fun/proof_of_mint_docs)
 
 ### 🌍 Language / 语言 / 語言
 
