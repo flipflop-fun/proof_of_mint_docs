@@ -2,13 +2,8 @@
 
 <div align="center">
 
-**A Revolutionary Decentralized Token Minting Mechanism**
+## A Revolutionary Decentralized Token Minting Mechanism
 
-[![PDF Version](https://img.shields.io/badge/PDF-Latest%20Paper-red?style=for-the-badge&logo=adobe)](./proof_of_mint_v1.1.pdf)
-[![HTML Version](https://img.shields.io/badge/HTML-Interactive%20View-blue?style=for-the-badge&logo=html5)](./proof_of_mint_v1.1.html)
-[![R Markdown](https://img.shields.io/badge/RMarkdown-Source%20Code-green?style=for-the-badge&logo=r)](./proof_of_mint_v1.1.Rmd)
-
----
 
 ### 🌍 Language / 语言 / 語言
 
@@ -25,7 +20,6 @@
 | Document Type | Description | Link |
 |---------------|-------------|------|
 | 📋 **Markdown Version** | GitHub-friendly Markdown format for easy reading | [📖 Read MD](./proof_of_mint_v1.1.md) |
-| 🌐 **Interactive Version (HTML)** | Online reading version with interactive charts and formulas | [🔗 Read Online](./proof_of_mint_v1.1.html) |
 | 📄 **Latest Paper (PDF)** | Complete academic paper with all technical details and mathematical proofs | [📥 Download PDF](./proof_of_mint_v1.1.pdf) |
 
 

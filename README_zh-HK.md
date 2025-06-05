@@ -2,13 +2,7 @@
 
 <div align="center">
 
-**一個革命性嘅去中心化代幣鑄造機制**
-
-[![PDF Version](https://img.shields.io/badge/PDF-最新論文-red?style=for-the-badge&logo=adobe)](./proof_of_mint_v1.1.pdf)
-[![HTML Version](https://img.shields.io/badge/HTML-互動式查看-blue?style=for-the-badge&logo=html5)](./proof_of_mint_v1.1.html)
-[![R Markdown](https://img.shields.io/badge/RMarkdown-原始碼-green?style=for-the-badge&logo=r)](./proof_of_mint_v1.1.Rmd)
-
----
+## 一個革命性嘅去中心化代幣鑄造機制
 
 ### 🌍 語言選擇
 
@@ -25,7 +19,6 @@
 | 文件類型 | 描述 | 連結 |
 |---------|------|------|
 | 📋 **Markdown 版本** | 方便喺 GitHub 上閱讀嘅 Markdown 格式 | [📖 閱讀 MD](./proof_of_mint_v1.1_hk.md) |
-| 🌐 **互動式版本 (HTML)** | 線上閱讀版本，支持互動式圖表同公式 | [🔗 線上閱讀](./proof_of_mint_v1.1_hk.html) |
 | 📄 **最新論文 (PDF)** | 完整嘅學術論文，包含所有技術細節同數學證明 ||
 
 ### ❓ 常見問題
