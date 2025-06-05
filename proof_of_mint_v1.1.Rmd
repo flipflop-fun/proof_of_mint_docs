@@ -2,11 +2,11 @@
 title: 'A new proposal of distributing tokens on blockchain: Proof of Mint'
 author: "Fair Launch Labs(F.L.L.)"
 date: "Nov.6, 2024"
-version: "v1.1"
+version: "v1.11"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 header-includes: 
   - \usepackage{amsmath}
 editor_options:
@@ -805,23 +805,37 @@ fee will increase accordingly.
 -   $M_0$: Base mint size per minting of the Genesis Era
 -   $C_e$: Elapsed epoches, $C_e = E * C$
 
-Mint times in an epoch: \begin{equation}
+Mint times in an epoch: 
+
+\begin{equation}
 Q = {\lfloor{\frac{T_0}{M_0}*d}\rfloor + 1}, (T_0 \nmid M_0)
-\end{equation} \begin{equation}
+\end{equation} 
+
+\begin{equation}
 Q = \frac{T_0}{M_0}*d, (T_0 \mid M_0)
-\end{equation} For simplicity, let's assume $T_0 \mid M_0$, the total
-fee: \begin{equation}
-TotalFee = \sum_{i=0}^{C_e}(P_0 \cdot Q_i)=\sum_{i=0}^{C_e}(\frac{P_0 \cdot T_0}{M_0}*d_i)
-\end{equation} As $d_i = d_{i-1} \cdot (1 + \delta d_i)$,
-$\delta d \in [0,0.01]$ (see. 3.1.1), and $d_0=1$, the total fee range
-will be: \begin{equation}
-TotalFee \in [\frac{P_0 \cdot T_0}{M_0} \cdot \sum_{i=0}^{C_e}1^i, \frac{P_0 \cdot T_0}{M_0} \cdot \sum_{i=0}^{C_e}1.01^i]
-\end{equation} Simplified: \begin{equation}
-TotalFee \in [\frac{P_0 \cdot T_0}{M_0} \cdot (C_e+1), \frac{P_0 \cdot T_0}{M_0} \cdot 100 \cdot (1.01^{C_e+1}-1)]
-\end{equation} **Example**
+\end{equation} For simplicity, let's assume $T_0 \mid M_0$, the total fee: 
+
+\begin{equation}
+TotalFee = \sum_{i=1}^{C_e}(P_0 \cdot Q_i)=\sum_{i=1}^{C_e}(\frac{P_0 \cdot T_0}{M_0}*d_i)
+\end{equation}
+
+As $d_i = d_{i-1} \cdot (1 + \delta d_i)$,
+$\delta d \in [0,0.01]$ (see. 3.1.1), and $d_0=1$, the total fee range will be: 
+
+\begin{equation}
+TotalFee \in [\frac{P_0 \cdot T_0}{M_0} \cdot \sum_{i=1}^{C_e}1^i, \frac{P_0 \cdot T_0}{M_0} \cdot \sum_{i=1}^{C_e}1.01^i]
+\end{equation}
+
+Simplified: 
+
+\begin{equation}
+TotalFee \in [\frac{P_0 \cdot T_0}{M_0} \cdot C_e, \frac{P_0 \cdot T_0}{M_0} \cdot 101 \cdot (1.01^{C_e}-1)]
+\end{equation} 
+
+**Example**
 
 $P_0=1$ USD, $T_0=9000$, $M_0=100$, $d=1.5$, $C_e=300$, Minimum total
-fee is \$27,090, and max is \$170,877.
+fee is \$27,000, and max is \$169,096.2.
 
 This indicates that if minting is done quickly, the actual minting time
 in epoch ($N_e$) is less than the target time($N_t$), it will lead to a
@@ -1244,16 +1258,16 @@ Price = \frac{0.90 \cdot TotalFee}{InitLiquidity}
 \end{equation}
 
 As the total mint fee is a range: \begin{equation}
-TotalFee \in [\frac{P_0 \cdot T_0}{M_0} \cdot (C_e+1), \frac{P_0 \cdot T_0}{M_0} \cdot 100 \cdot (1.01^{C_e+1}-1)]
+TotalFee \in [\frac{P_0 \cdot T_0}{M_0} \cdot C_e, \frac{P_0 \cdot T_0}{M_0} \cdot 101 \cdot (1.01^{C_e}-1)]
 \end{equation}
 
 So, the lowest price when initializing the Liquidity Pool will be:
 \begin{equation}
-P_{low} = \frac{P_0 \cdot (C_e+1)(1-r_l)(1-f)}{M_0 \cdot C \cdot r_l \cdot (1-f^E)}*0.90
+P_{low} = \frac{P_0 \cdot C_e \cdot (1-r_l)(1-f)}{M_0 \cdot C \cdot r_l \cdot (1-f^E)}*0.90
 \end{equation}
 
 And the highest price will be: \begin{equation}
-P_{high} = \frac{100 \cdot P_0 \cdot (1.01^{C_e+1}-1)(1-r_l)(1-f)}{M_0 \cdot C \cdot r_l \cdot (1-f^E)}*0.90=\frac{100 \cdot (1.01^{C_e+1}-1)}{C_e+1} \cdot P_{low}
+P_{high} = \frac{101 \cdot P_0 \cdot (1.01^{C_e}-1)(1-r_l)(1-f)}{M_0 \cdot C \cdot r_l \cdot (1-f^E)}*0.90=\frac{101 \cdot (1.01^{C_e}-1)}{C_e} \cdot P_{low}
 \end{equation}
 
 In the aboved formula, $C_e = E \cdot C$ ($C$ is Epoches per Era, $E$ is
