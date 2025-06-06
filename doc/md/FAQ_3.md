@@ -628,7 +628,7 @@ flipflop.plus’s liquidity pool is **not automatically locked** (LP Tokens are 
 
 ---
 
-### F6. Who Can Manage Assets in the Token Vault?
+### F5. Who Can Manage Assets in the Token Vault?
 flipflop.plus’s **Token Vault** (project treasury) uses a **multi-tier permission system** for secure and transparent asset management. Rules:
 
 #### 1. Management Permissions
@@ -666,7 +666,7 @@ flipflop.plus’s **Token Vault** (project treasury) uses a **multi-tier permiss
 
 ---
 
-### F7. Can Token Vault Funds Be Used During the Consensus Period? When Are They Accessible?
+### F6. Can Token Vault Funds Be Used During the Consensus Period? When Are They Accessible?
 #### 1. During Consensus Period (Before Target Milestone)
 - **❌ Unavailable**:
   - **Token Vault** funds (minting fees + tokens) are **fully frozen**, used only for:
@@ -694,7 +694,7 @@ flipflop.plus’s **Token Vault** (project treasury) uses a **multi-tier permiss
 
 ---
 
-### F8. How to Authorize a Third-Party Value Manager (VM) to Operate the Liquidity Wallet?
+### F7. How to Authorize a Third-Party Value Manager (VM) to Operate the Liquidity Wallet?
 **Steps**:
 1. **Access Management Page**:
    - Log into flipflop.plus website or app, go to **Menu → Tools → My Deployment**.
@@ -711,7 +711,7 @@ flipflop.plus’s **Token Vault** (project treasury) uses a **multi-tier permiss
 
 ---
 
-### F9. Can Issuers Designate a VM During Consensus or Issuance Periods?
+### F8. Can Issuers Designate a VM During Consensus or Issuance Periods?
 **Yes, issuers can designate a Value Manager (VM) at any time**:
 1. **Authorization Timing**:
    - **Consensus Period**: Set or change VM via the **Authority** page.
@@ -723,7 +723,7 @@ flipflop.plus’s **Token Vault** (project treasury) uses a **multi-tier permiss
 
 ---
 
-### F10. How Are Tokens in the Token Vault Obtained?
+### F9. How Are Tokens in the Token Vault Obtained?
 #### 1. Token Source
 Tokens in the Token Vault are generated via a **pre-minting mechanism**:
 - **Initial Supply**: Set per token type (Standard=100M, Meme=1B).
@@ -740,7 +740,7 @@ Tokens in the Token Vault are generated via a **pre-minting mechanism**:
 
 ---
 
-### F11. How Is SOL Obtained in the Token Vault?
+### F10. How Is SOL Obtained in the Token Vault?
 #### 1. SOL Source
 All SOL in the Token Vault comes from **user **minting fees**fees, after deducting:
 1. **Protocol Fee (5%)**: Fixed deduction for platform maintenance.
@@ -756,12 +756,12 @@ Stored SOL = User Minting Fee - Protocol Fee (5%) – URC Reward (0–5%)
 
 ---
 
-### F12. Can Assets Be Withdrawn from the Token Vault?
+### F11. Can Assets Be Withdrawn from the Token Vault?
 No.
 
 ---
 
-### F13. How Can Token Vault Assets Be Used?
+### F12. How Can Token Vault Assets Be Used?
 #### 1. Permitted Operations
 Token Vault assets (SOL + tokens) are **restricted** to liquidity management:
 1. **Add Liquidity**:
@@ -790,7 +790,7 @@ Token Vault assets (SOL + tokens) are **restricted** to liquidity management:
 
 ---
 
-### F14. How Is Token Vault Fund Safety Ensured Technically?
+### F13. How Is Token Vault Fund Safety Ensured Technically?
 The Token Vault is a **PDA account**, owned by the Solana program itself, ensuring no one can alter its balance.
 
 #### 1. PDA Account (Program Derived Address)
@@ -819,7 +819,7 @@ The Token Vault is a **PDA account**, owned by the Solana program itself, ensuri
 
 ---
 
-### F15. How Can Issuers Prevent Value Manager (VM) Malfeasance?
+### F14. How Can Issuers Prevent Value Manager (VM) Malfeasance?
 flipflop.plus uses a **dual-risk-control mechanism** to prevent VM misuse, ensuring fund safety:
 
 #### 1. Emergency Freeze
@@ -843,12 +843,12 @@ flipflop.plus uses a **dual-risk-control mechanism** to prevent VM misuse, ensur
 
 ---
 
-### F16. Who Is the Default Value Manager (VM)?
+### F15. Who Is the Default Value Manager (VM)?
 The issuer.
 
 ---
 
-### F17. How Can a VM View All Managed Tokens?
+### F16. How Can a VM View All Managed Tokens?
 **Steps**:
 1. **Log into Flipflop.plus**:
    - Access the app or website, connect the VM’s authorized Solana wallet.
@@ -863,7 +863,7 @@ The issuer.
 
 ---
 
-### F18. What If the Community Fears Endless Minting Post-Graduation? How to Stop Minting?
+### F17. What If the Community Fears Endless Minting Post-Graduation? How to Stop Minting?
 #### **Solution**: Burn Mint Token Vault
 **Steps**:
 1. **Initiate Burn**:

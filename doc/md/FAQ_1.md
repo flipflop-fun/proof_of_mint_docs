@@ -65,7 +65,7 @@ FFP (flipflop.plus) and pump.fun are both decentralized token issuance platforms
 - **pump.fun**: Simple token economics driven by the bonding curve model.
 - **FFP**: Designed via PoM for fair distribution and market stability, reducing speculative behavior.
 
-### Summary
+#### Summary
 FFP (flipflop.plus) fundamentally differs from pump.fun in token issuance and trading mechanisms. FFP’s **Proof of Mint (PoM)** introduces difficulty adjustments and liquidity management to address fairness issues, Sybil attacks, lack of consensus time, fraud, and market value management in **Fair Minting**. pump.fun focuses on rapid token creation and trading, suitable for meme tokens and short-term speculative scenarios. Their design philosophies reflect distinct priorities.
 
 ---
@@ -598,7 +598,7 @@ flipflop.plus ensures fair token access through **algorithmic constraints** and 
 
 ---
 
-### A15. Is minting cost increased per Checkpoint or per mint operation?
+### A14. Is minting cost increased per Checkpoint or per mint operation?
 
 Minting cost on flipflop increments **per Checkpoint**, not per minting operation.
 
@@ -638,4 +638,4 @@ Minting cost on flipflop increments **per Checkpoint**, not per minting operatio
 
 **Summary**: Costs increase **per Checkpoint**, balancing **anti-bot protection**, **computational efficiency**, and **fairness** by providing predictable cost windows for strategic participation.
 
-[NEXT PART](./FAQ_2.md)
+[NEXT PART](FAQ_2.md)

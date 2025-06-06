@@ -20,17 +20,15 @@
 
 | Document Type | Description | Link |
 |---------------|-------------|------|
-| 📋 **Markdown Version** | GitHub-friendly Markdown format for easy reading | [📖 Read MD](./proof_of_mint_v1.1.md) |
-| 📄 **Latest Paper (PDF)** | Complete academic paper with all technical details and mathematical proofs | [📥 Download PDF](./proof_of_mint_v1.1.pdf) |
+| 📋 **Markdown Version** | GitHub-friendly Markdown format for easy reading | [📖 Read MD](./doc/md/proof_of_mint_v1.1.md) |
+| 📄 **Latest Paper (PDF)** | Complete academic paper with all technical details and mathematical proofs | [📥 Download PDF](./doc/pdf/proof_of_mint_v1.1.pdf) |
 
 
 ### ❓ Frequently Asked Questions
 
 | Document | Description | Link |
 |----------|-------------|------|
-| 🤔 **Detailed FAQ1** | Comprehensive Q&A about PoM and platform comparisons #1 | [📖 FAQ_1](./FAQ_1.md) |
-| 🤔 **Detailed FAQ2** | Comprehensive Q&A about PoM and platform comparisons #2 | [📖 FAQ_2](./FAQ_2.md) |
-| 🤔 **Detailed FAQ3** | Comprehensive Q&A about PoM and platform comparisons #3 | [📖 FAQ_3](./FAQ_3.md) |
+| 🤔 **Detailed FAQ1** | Comprehensive Q&A about PoM and platform comparisons #1 | [📖 FAQ](./doc/md/FAQ_index.md) |
 
 ---
 
@@ -59,7 +57,7 @@ Compared to platforms like pump.fun, PoM provides:
 ## 🚀 Quick Start
 
 1. **📖 Read the Paper**: Start with the [PDF version](./proof_of_mint_v1.1.pdf) to understand PoM's theoretical foundation
-2. **🔍 Check FAQ**: Learn about common questions and practical applications through [FAQ](./FAQ_1.md)
+2. **🔍 Check FAQ**: Learn about common questions and practical applications through [FAQ](./doc/md/FAQ_1.md)
 3. **📊 Study Workflows**: Review workflow diagrams to understand implementation details
 
 ---

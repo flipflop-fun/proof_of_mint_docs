@@ -601,4 +601,4 @@ flipflop.plus 嘅鑄造成本係 **每個 Checkpoint** 增加，而唔係每次�
 
 **總結**：成本係 **每個 Checkpoint** 增加，平衡 **防機械人保護**、**計算效率** 同 **公平性**，為策略性參與提供可預測嘅成本窗口。
 
-[NEXT PART](./FAQ_2_hk.md)
+[NEXT PART](FAQ_2_hk.md)

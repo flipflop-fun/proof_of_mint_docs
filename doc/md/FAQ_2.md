@@ -2,7 +2,7 @@
 
 ## A. About (Continued)
 
-### A16. Is the number of minting operations per Checkpoint fixed?
+### A15. Is the number of minting operations per Checkpoint fixed?
 **No, it is not fixed.** The number of minting operations in each Checkpoint is determined by the **target minting amount (T)** and the **dynamic single minting amount (M)**, with the total minting amount constrained to not exceed the target. Below are the key mechanisms and case studies:
 
 #### 1. Core Calculation Rules
@@ -85,7 +85,7 @@ The number of minting operations per Checkpoint is **not fixed** and is dynamica
 
 ---
 
-### A17. How does the Rebase mechanism for minting costs and market prices after reaching the Target Milestone prevent a death spiral?
+### A16. How does the Rebase mechanism for minting costs and market prices after reaching the Target Milestone prevent a death spiral?
 flipflop.plus employs a dual **Rebase mechanism** of **minting cost anchoring** and **liquidity self-reinforcement** to break the downward spiral common in traditional tokens. Below are the core principles and anti-spiral design:
 
 #### 1. Core Logic of the Rebase Mechanism
@@ -134,7 +134,7 @@ This design encodes traditional financial **market-making** and **value storage*
 
 ---
 
-### A18. Are there plans to support non-Solana chains in the future?
+### A17. Are there plans to support non-Solana chains in the future?
 flipflop.plus is designed with **protocol portability** and plans a **multi-chain deployment** across 2024–2027. Below is the detailed roadmap:
 
 #### 1. Confirmed Supported Blockchains
@@ -187,7 +187,7 @@ The **multi-chain blueprint** of flipflop.plus is a strategic move to build a **
 
 ---
 
-### A19. What are the platform’s governance tokens and decentralized governance mechanisms?
+### A18. What are the platform’s governance tokens and decentralized governance mechanisms?
 flipflop.plus plans to issue native governance tokens **when conditions are met** (timeline unspecified) to enable community-driven protocol upgrades and parameter governance.
 
 - **Details**:
@@ -196,7 +196,7 @@ flipflop.plus plans to issue native governance tokens **when conditions are met*
 
 ---
 
-### A20. What is the future roadmap of flipflop.plus?
+### A19. What is the future roadmap of flipflop.plus?
 flipflop.plus’s future roadmap centers on **AI-driven minting**, **socialized entry points**, **multi-chain ecosystem**, and **closed-loop trading markets**. Below is the draft roadmap:
 
 #### 1. AI Agent-Driven Primary Market (Minting) (Q1 2025)
@@ -786,4 +786,4 @@ If you lack a URC, obtain one via:
 #### Off-Chain Anti-Eavesdropping
 URCs use end-to-end encryption, distributed via off-chain channels (e.g., images, DMs), preventing on-chain data interception and ensuring human usage.
 
-[NEXT PART](./FAQ_3.md)
+[NEXT PART](FAQ_3.md)
