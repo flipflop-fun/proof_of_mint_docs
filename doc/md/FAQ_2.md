@@ -363,11 +363,13 @@ $$
 \text{InitLiquidity} = C \cdot T_0 \cdot r_l \cdot \frac{1 - f^E}{(1 - f)(1 - r_l)}
 $$
 Parameters: $C=250$, $T_0=200,000$, $r_l=0.2$, $f=0.5$, $E=1$
+
 $$
 \text{InitLiquidity} = 250 \cdot 200,000 \cdot 0.2 \cdot \frac{1 - 0.5^1}{(1 - 0.5)(1 - 0.2)} = 12,500,000 \ \text{tokens}
 $$
 
 ##### Step 2: Calculate Total Minting Fee Range (TotalFee)
+
 $$
 \text{TotalFee} \in \left[ \frac{P_0 \cdot T_0}{M_0} \cdot C_e, \ \frac{P_0 \cdot T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
