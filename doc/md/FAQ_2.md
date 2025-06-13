@@ -371,12 +371,16 @@ $$
 $$
 \text{TotalFee} \in \left[ \frac{P_0 \cdot T_0}{M_0} \cdot C_e, \ \frac{P_0 \cdot T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
+
 Where $C_e = E \cdot C = 250$
 - **Lower Bound (No FOMO Increase)**:
+
   $$
   \text{TotalFee}_{\text{min}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 = 4 \cdot 250 = 1,000 \ \text{SOL}
   $$
+
 - **Upper Bound (FOMO Increases 1% per Checkpoint)**:
+
   $$
   \text{TotalFee}_{\text{max}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 101 \cdot (1.01^{250} - 1) \approx 4,457 \ \text{SOL}
   $$

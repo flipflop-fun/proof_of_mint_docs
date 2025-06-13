@@ -165,9 +165,11 @@ Upon reaching the target Milestone (e.g., 25% of total token supply), the token 
 The total token supply (**Total Supply**) on flipflop.plus (FFP) is calculated using a mechanism based on **Milestone**, **Checkpoint**, and **Reduction Factor**, resembling Bitcoin’s halving model, with phased token release across Milestones and Checkpoints.
 
 #### Formula 1: Total Supply
-$
+
+$$
 \text{Total Supply} = C \cdot T_0 \cdot \frac{1 - f^E}{1 - f}
-$
+$$
+
 - **Parameters**:
   - $C$: Number of Checkpoints per Milestone.
   - $T_0$: Target minting quantity per Checkpoint in the first Milestone.

@@ -628,21 +628,16 @@ We will try to calculate all parameters according to the following conditions:
    $C = TotalSupply \cdot (1 - f) / T_0 = 10,000,000 \cdot (1 - 0.75) / 10000 = 250$
 
 2. From the following formula, we can get $N_t = 14935$:
-   $$
-   C \cdot N_t \cdot t \cdot \log_f(1-0.95) = 180 \text{ days} \cdot 86400 \text{ seconds/day}
-   $$
+   
+   $C \cdot N_t \cdot t \cdot \log_f(1-0.95) = 180 \text{ days} \cdot 86400 \text{ seconds/day}$
 
 3. From the following formula, we can get $C_e = 2603$:
 
-   $$
-   C_e = Eras \cdot C = \log_f(1-0.95) \cdot C = 10.413 \cdot 250 = 2603
-   $$
+   $C_e = Eras \cdot C= \log_f(1-0.95) \cdot C = 10.413 \cdot 250 = 2603$
 
 4. We already know: $T_0=10,000$, $C_e=2603$, $M_0=1000$, the minimum total fee formula:
 
-   $$
-   \frac{P_0 \cdot T_0 \cdot (C_e+1)}{M_0} = P_0 \cdot 10,000 \cdot 2604 / 1000 = 300,000
-   $$
+   $\frac{P_0 \cdot T_0 \cdot (C_e+1)}{M_0} = P_0 \cdot 10,000 \cdot 2604 / 1000 = 300,000$
 
    According to the minimum total fee formula, we can get $P_0 = 11.52$ USD, which means the lowest price of each token is $P_0 / M_0 = 11.52 / 1000 = 0.01152$ USD.
 
