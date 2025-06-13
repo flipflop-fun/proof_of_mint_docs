@@ -387,22 +387,22 @@ $$
 
 - **Upper Bound (FOMO Increases 1% per Checkpoint)**:
 
-  $$
-  \text{TotalFee}_{\text{max}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 101 \cdot (1.01^{250} - 1) \approx 4,457 \ \text{SOL}
-  $$
+$$
+\text{TotalFee}_{\text{max}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 101 \cdot (1.01^{250} - 1) \approx 4,457 \ \text{SOL}
+$$
 
 ##### Step 3: Calculate Initial Price Range
 - **Lowest Price ($P_{\text{low}}$)**:
 
-  $$
-  P_{\text{low}} = \frac{0.90 \cdot \text{TotalFee}_{\text{min}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 1,000}{12,500,000} \approx 0.000072 \ \text{SOL/token}
-  $$
+$$
+P_{\text{low}} = \frac{0.90 \cdot \text{TotalFee}_{\text{min}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 1,000}{12,500,000} \approx 0.000072 \ \text{SOL/token}
+$$
 
 - **Highest Price ($P_{\text{high}}$)**:
 
-  $$
-  P_{\text{high}} = \frac{0.90 \cdot \text{TotalFee}_{\text{max}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 4,457}{12,500,000} \approx 0.000321 \ \text{SOL/token}
-  $$
+$$
+P_{\text{high}} = \frac{0.90 \cdot \text{TotalFee}_{\text{max}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 4,457}{12,500,000} \approx 0.000321 \ \text{SOL/token}
+$$
 
 #### 3. Reasons for the Range
 1. **FOMO Coefficient Dynamics**:

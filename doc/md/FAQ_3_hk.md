@@ -38,28 +38,28 @@ $$
 ##### 情景 1：按目標速度鑄造 ($d=1$)
 - **單次鑄造成本**：
 
-  $$
-  p = \frac{0.2 \cdot 1}{10,000 \cdot 0.5^{0}} = \frac{0.2}{10,000} = 0.00002 \ \text{SOL/代幣}
-  $$
+$$
+p = \frac{0.2 \cdot 1}{10,000 \cdot 0.5^{0}} = \frac{0.2}{10,000} = 0.00002 \ \text{SOL/代幣}
+$$
 
 - **總成本**：
 
-  $$
-  \text{TotalCost} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 \cdot 1 = 4 \cdot 250 = 1,000 \ \text{SOL}
-  $$
+$$
+\text{TotalCost} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 \cdot 1 = 4 \cdot 250 = 1,000 \ \text{SOL}
+$$
 
 ##### 情景 2：快速鑄造 ($d$ 增加至 1.5)
 - **單次鑄造成本**：
 
-  $$
-  p = \frac{0.2 \cdot 1.5}{10,000 \cdot 0.5^{0}} = 0.00003 \ \text{SOL/代幣}
-  $$
+$$
+p = \frac{0.2 \cdot 1.5}{10,000 \cdot 0.5^{0}} = 0.00003 \ \text{SOL/代幣}
+$$
 
 - **總成本**：
 
-  $$
-  \text{TotalCost} = 4 \cdot 250 \cdot 1.5 = 1,500 \ \text{SOL}
-  $$
+$$
+\text{TotalCost} = 4 \cdot 250 \cdot 1.5 = 1,500 \ \text{SOL}
+$$
 
 #### 3. 影響成本嘅主要因素
 | 因素 | 對成本嘅影響 | 範例 |
@@ -101,9 +101,9 @@ $$
 - **獎勵機制**：推薦者可獲得被推薦用戶節省費用嘅 **20%**。
 - **公式**：
 
-  $$
-  \text{Referrer Reward} = 0.2 \cdot (P_0 - \text{Fee}) = 0.2 \cdot P_0 \cdot k \cdot \left(1 - \frac{1}{d}\right)
-  $$
+$$
+\text{Referrer Reward} = 0.2 \cdot (P_0 - \text{Fee}) = 0.2 \cdot P_0 \cdot k \cdot \left(1 - \frac{1}{d}\right)
+$$
 
   - $P_0$：固定鑄造費用
   - $k$：折扣率（由推薦者嘅代幣持有比例決定）
@@ -114,22 +114,22 @@ $$
 - **公式**：
 
 $$
-  \text{Actual Fee} = P_0 \cdot \left(1 + \frac{k}{d} - k\right)
-  $$
+\text{Actual Fee} = P_0 \cdot \left(1 + \frac{k}{d} - k\right)
+$$
 
 - 折扣率 $k$ 由推薦者嘅代幣持有比例 $r$ 決定：
 
-  $$
-  k =
-  \begin{cases}
-  0\% & r < 0.2\% \\
-  5\% & 0.2\% \leq r < 0.4\% \\
-  10\% & 0.4\% \leq r < 0.6\% \\
-  15\% & 0.6\% \leq r < 0.8\% \\
-  20\% & 0.8\% \leq r < 1\% \\
-  25\% & r \geq 1\%
-  \end{cases}
-  $$
+$$
+k =
+\begin{cases}
+0\% & r < 0.2\% \\
+5\% & 0.2\% \leq r < 0.4\% \\
+10\% & 0.4\% \leq r < 0.6\% \\
+15\% & 0.6\% \leq r < 0.8\% \\
+20\% & 0.8\% \leq r < 1\% \\
+25\% & r \geq 1\%
+\end{cases}
+$$
 
 #### 3. 計算範例
 **參數**：
@@ -145,9 +145,9 @@ $$
 
 - **費用節省**：
 
-  $$
-  P_0 - \text{Fee} = 0.1 - 0.09833 = 0.00167\ \text{ETH}
-  $$
+$$
+P_0 - \text{Fee} = 0.1 - 0.09833 = 0.00167\ \text{ETH}
+$$
 
 **步驟 2：計算推薦者獎勵**：
 
@@ -209,9 +209,9 @@ URC 機制通過雙重調節調整淨鑄造費用：
 - **推薦者**：獲得費用節省嘅 20%（公式：$0.2 \cdot P_0 \cdot k \cdot (1 - \frac{1}{d})$）。
 - **系統淨影響**：每次 URC 鑄造嘅淨收入：
 
-  $$
-  \text{NetFee} = \text{Fee} - \text{Referrer Reward} = P_0 \cdot \left(1 - 1.2k + \frac{1.2k}{d}\right)
-  $$
+$$
+\text{NetFee} = \text{Fee} - \text{Referrer Reward} = P_0 \cdot \left(1 - 1.2k + \frac{1.2k}{d}\right)
+$$
 
   其中：
   - $P_0$：固定鑄造費用（標準=0.2 SOL，迷因=0.01 SOL）
@@ -250,30 +250,30 @@ $$
 ##### 4.1 標準模式
 - 淨費用：
 
-  $$
-  \text{NetFee} = P_0 \times (1 - 1.2k) = 0.2 \times (1 - 1.2 \times 0.25) = 0.14\ \text{SOL}
-  $$
+$$
+\text{NetFee} = P_0 \times (1 - 1.2k) = 0.2 \times (1 - 1.2 \times 0.25) = 0.14\ \text{SOL}
+$$
 
 - 流動性池影響：減少 30% SOL，(0.2 - 0.14) / 0.2 = 30%
 - 總鑄造費用範圍：
 
-  $$
-  [0.7 \times 1,000,\ 0.7 \times 4,457] = [700,\ 3,119.9]\ \text{SOL}
-  $$
+$$
+[0.7 \times 1,000,\ 0.7 \times 4,457] = [700,\ 3,119.9]\ \text{SOL}
+$$
 
 ##### 4.2 迷因模式
 - 淨費用：
 
-  $$
-  \text{NetFee} = 0.01 \times 0.7 = 0.007\ \text{SOL}
-  $$
+$$
+\text{NetFee} = 0.01 \times 0.7 = 0.007\ \text{SOL}
+$$
 
 - 流動性池影響：減少 30%
 - 總鑄造費用範圍：
 
-  $$
-  [0.7 \times 250,\ 0.7 \times 1,114.25] = [175,\ 780]\ \text{SOL}
-  $$
+$$
+[0.7 \times 250,\ 0.7 \times 1,114.25] = [175,\ 780]\ \text{SOL}
+$$
 
 #### 5. 極端情景嘅經濟影響比較
 | 影響維度 | 標準模式 | 迷因模式 |
@@ -286,9 +286,9 @@ $$
 #### 6. 社群增長補償
 - 假設 URC 吸引 100% 更多參與者，實際流動性池規模變為：
 
-  $$
-  \text{ActualLP} = 0.7 \times 2 = 1.4 \times \text{Original Value}
-  $$
+$$
+\text{ActualLP} = 0.7 \times 2 = 1.4 \times \text{Original Value}
+$$
 
 #### 7. 結論
 喺極端情況下，URC 機制將兩種模式嘅總費用範圍減少 **最多 30%**，但通過以下方式緩解：
@@ -763,9 +763,9 @@ flipflop.plus 嘅 **代幣金庫**（項目庫戶）使用 **多層權限系統*
   - 每次用戶掘金，**掘金池** 同時向用戶及代金池空投代幣，其中：
   - **代金池代幣數量**：
 
-    $$
-    \text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}
-    $$
+$$
+\text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}
+$$
 
 ---
 
