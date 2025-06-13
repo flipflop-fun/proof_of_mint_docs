@@ -381,9 +381,9 @@ $$
 Where $C_e = E \cdot C = 250$
 - **Lower Bound (No FOMO Increase)**:
 
-  $$
-  \text{TotalFee}_{\text{min}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 = 4 \cdot 250 = 1,000 \ \text{SOL}
-  $$
+$$
+\text{TotalFee}_{\text{min}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 = 4 \cdot 250 = 1,000 \ \text{SOL}
+$$
 
 - **Upper Bound (FOMO Increases 1% per Checkpoint)**:
 
