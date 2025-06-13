@@ -340,9 +340,11 @@ The token price and total minting cost range on flipflop.plus are determined by 
 #### 1. Core Formulas and Parameters
 ##### Liquidity Pool Initialization Price Formula
 Per the platform’s design, the initial token price is calculated as:
+
 $$
 \text{Price} = \frac{0.90 \cdot \text{TotalFee}}{\text{InitLiquidity}}
 $$
+
 - **TotalFee**: Total minting fees (after deducting 5% protocol fee and 0–5% referral fee, 90–95% is injected into the liquidity pool; 90% is used as the lower bound here).
 - **InitLiquidity**: Initial token amount in the liquidity pool.
 
@@ -359,9 +361,11 @@ $$
 
 #### 2. Step-by-Step Calculation Example (Standard Mode)
 ##### Step 1: Calculate Initial Liquidity Pool Token Amount (InitLiquidity)
+
 $$
 \text{InitLiquidity} = C \cdot T_0 \cdot r_l \cdot \frac{1 - f^E}{(1 - f)(1 - r_l)}
 $$
+
 Parameters: $C=250$, $T_0=200,000$, $r_l=0.2$, $f=0.5$, $E=1$
 
 $$
@@ -389,10 +393,13 @@ Where $C_e = E \cdot C = 250$
 
 ##### Step 3: Calculate Initial Price Range
 - **Lowest Price ($P_{\text{low}}$)**:
+
   $$
   P_{\text{low}} = \frac{0.90 \cdot \text{TotalFee}_{\text{min}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 1,000}{12,500,000} \approx 0.000072 \ \text{SOL/token}
   $$
+
 - **Highest Price ($P_{\text{high}}$)**:
+
   $$
   P_{\text{high}} = \frac{0.90 \cdot \text{TotalFee}_{\text{max}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 4,457}{12,500,000} \approx 0.000321 \ \text{SOL/token}
   $$
@@ -701,6 +708,7 @@ The minting time estimation on flipflop.plus is based on a **geometric series mo
 
 #### 1. Total Time Formula
 Each Milestone’s time is $C \cdot t_{\text{check}}$ ($t_{\text{check}}$ is the target Checkpoint time), so total time is:
+
 $$
 T_{\text{total}} = E \cdot C \cdot t_{\text{check}}
 $$

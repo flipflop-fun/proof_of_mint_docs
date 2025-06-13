@@ -347,9 +347,11 @@ flipflop.plus 嘅代幣價格同總鑄造成本範圍由 **流動性池初始化
 #### 1. 核心公式同參數
 ##### 流動性池初始化價格公式
 根據平台設計，初始代幣價格計算為：
+
 $$
 \text{Price} = \frac{0.90 \cdot \text{TotalFee}}{\text{InitLiquidity}}
 $$
+
 - **TotalFee**：總鑄造費用（扣除 5% 協議費用同 0–5% 推薦費用後，90–95% 注入流動性池；此處以 90% 為下限）。
 - **InitLiquidity**：流動性池初始代幣量。
 
@@ -366,10 +368,13 @@ $$
 
 #### 2. 逐步計算範例（標準模式）
 ##### 步驟 1：計算初始流動性池代幣量（InitLiquidity）
+
 $$
 \text{InitLiquidity} = C \cdot T_0 \cdot r_l \cdot \frac{1 - f^E}{(1 - f)(1 - r_l)}
 $$
+
 參數：$C=250$，$T_0=200,000$，$r_l=0.2$，$f=0.5$，$E=1$
+
 $$
 \text{InitLiquidity} = 250 \cdot 200,000 \cdot 0.2 \cdot \frac{1 - 0.5^1}{(1 - 0.5)(1 - 0.2)} = 12,500,000 \ \text{代幣}
 $$
@@ -378,22 +383,29 @@ $$
 $$
 \text{TotalFee} \in \left[ \frac{P_0 \cdot T_0}{M_0} \cdot C_e, \ \frac{P_0 \cdot T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
+
 其中 $C_e = E \cdot C = 250$
 - **下限（無 FOMO 增加）**：
+
   $$
   \text{TotalFee}_{\text{min}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 = 4 \cdot 250 = 1,000 \ \text{SOL}
   $$
+
 - **上限（FOMO 每 Checkpoint 增加 1%）**：
+
   $$
   \text{TotalFee}_{\text{max}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 101 \cdot (1.01^{250} - 1) \approx 4,457 \ \text{SOL}
   $$
 
 ##### 步驟 3：計算初始價格範圍
 - **最低價格 ($P_{\text{low}}$)**：
+
   $$
   P_{\text{low}} = \frac{0.90 \cdot \text{TotalFee}_{\text{min}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 1,000}{12,500,000} \approx 0.000072 \ \text{SOL/代幣}
   $$
+
 - **最高價格 ($P_{\text{high}}$)**：
+
   $$
   P_{\text{high}} = \frac{0.90 \cdot \text{TotalFee}_{\text{max}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 4,457}{12,500,000} \approx 0.000321 \ \text{SOL/代幣}
   $$
@@ -707,6 +719,7 @@ flipflop.plus 嘅鑄造時間估計基於 **幾何級數模型** 同 **動態衰
 
 #### 1. 總時間公式
 每個 Milestone 嘅時間為 $C \cdot t_{\text{check}}$（$t_{\text{check}}$ 係目標 Checkpoint 時間），總時間為：
+
 $$
 T_{\text{total}} = E \cdot C \cdot t_{\text{check}}
 $$

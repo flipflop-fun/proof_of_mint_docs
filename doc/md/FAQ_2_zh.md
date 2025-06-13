@@ -337,6 +337,7 @@ flipflop.plus 的代币价格和总铸造成本范围由**流动性池初始化�
 #### 1. 核心公式和参数
 ##### 流动性池初始化价格公式
 根据平台设计，初始代币价格计算如下：
+
 $$
 \text{Price} = \frac{0.90 \cdot \text{TotalFee}}{\text{InitLiquidity}}
 $$
@@ -356,23 +357,30 @@ $$
 
 #### 2. 分步计算示例（标准模式）
 ##### 步骤 1：计算初始流动性池代币量（InitLiquidity）
+
 $$
 \text{InitLiquidity} = C \cdot T_0 \cdot r_l \cdot \frac{1 - f^E}{(1 - f)(1 - r_l)}
 $$
+
 参数：$C=250$, $T_0=200,000$, $r_l=0.2$, $f=0.5$, $E=1$
+
 $$
 \text{InitLiquidity} = 250 \cdot 200,000 \cdot 0.2 \cdot \frac{1 - 0.5^1}{(1 - 0.5)(1 - 0.2)} = 12,500,000 \ \text{代币}
 $$
 
 ##### 步骤 2：计算总铸造费用范围（TotalFee）
+
 $$
 \text{TotalFee} \in \left[ \frac{P_0 \cdot T_0}{M_0} \cdot C_e, \ \frac{P_0 \cdot T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
+
 其中 $C_e = E \cdot C = 250$
 - **下限（无 FOMO 增加）**：
+
   $$
   \text{TotalFee}_{\text{min}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 = 4 \cdot 250 = 1,000 \ \text{SOL}
   $$
+
 - **上限（FOMO 每个检查点增加 1%）**：
   $$
   \text{TotalFee}_{\text{max}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 101 \cdot (1.01^{250} - 1) \approx 4,457 \ \text{SOL}
@@ -380,10 +388,13 @@ $$
 
 ##### 步骤 3：计算初始价格范围
 - **最低价格 ($P_{\text{low}}$)**：
+
   $$
   P_{\text{low}} = \frac{0.90 \cdot \text{TotalFee}_{\text{min}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 1,000}{12,500,000} \approx 0.000072 \ \text{SOL/代币}
   $$
+
 - **最高价格 ($P_{\text{high}}$)**：
+
   $$
   P_{\text{high}} = \frac{0.90 \cdot \text{TotalFee}_{\text{max}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 4,457}{12,500,000} \approx 0.000321 \ \text{SOL/代币}
   $$
@@ -692,6 +703,7 @@ flipflop.plus 的铸造时间估计基于**几何级数模型**和**动态衰减
 
 #### 1. 总时间公式
 每个里程碑的时间为 $C \cdot t_{\text{check}}$（$t_{\text{check}}$ 为目标检查点时间），因此总时间为：
+
 $$
 T_{\text{total}} = E \cdot C \cdot t_{\text{check}}
 $$

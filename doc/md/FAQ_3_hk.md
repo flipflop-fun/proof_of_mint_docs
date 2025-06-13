@@ -12,11 +12,13 @@ flipflop.plus 嘅鑄造成本使用 **動態算法模型** 實時計算。核心
 
 #### 1. 核心公式
 **單次鑄造每代幣成本**：
+
 $$
 p = \frac{P_0 \cdot d}{M_0 \cdot f^{(m-1)}}
 $$
 
 **完成目標 Milestone 嘅總鑄造成本**：
+
 $$
 \text{TotalCost} = \frac{P_0 \cdot T_0}{M_0} \cdot \sum_{i=1}^{C_e} d_i
 $$
@@ -35,20 +37,26 @@ $$
 #### 2. 逐步計算範例（標準模式）
 ##### 情景 1：按目標速度鑄造 ($d=1$)
 - **單次鑄造成本**：
+
   $$
   p = \frac{0.2 \cdot 1}{10,000 \cdot 0.5^{0}} = \frac{0.2}{10,000} = 0.00002 \ \text{SOL/代幣}
   $$
+
 - **總成本**：
+
   $$
   \text{TotalCost} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 \cdot 1 = 4 \cdot 250 = 1,000 \ \text{SOL}
   $$
 
 ##### 情景 2：快速鑄造 ($d$ 增加至 1.5)
 - **單次鑄造成本**：
+
   $$
   p = \frac{0.2 \cdot 1.5}{10,000 \cdot 0.5^{0}} = 0.00003 \ \text{SOL/代幣}
   $$
+
 - **總成本**：
+
   $$
   \text{TotalCost} = 4 \cdot 250 \cdot 1.5 = 1,500 \ \text{SOL}
   $$
@@ -92,9 +100,11 @@ $$
 #### 1. 推薦者（URC 提供者）好處
 - **獎勵機制**：推薦者可獲得被推薦用戶節省費用嘅 **20%**。
 - **公式**：
+
   $$
   \text{Referrer Reward} = 0.2 \cdot (P_0 - \text{Fee}) = 0.2 \cdot P_0 \cdot k \cdot \left(1 - \frac{1}{d}\right)
   $$
+
   - $P_0$：固定鑄造費用
   - $k$：折扣率（由推薦者嘅代幣持有比例決定）
   - $d$：當前 FOMO 係數（難度因子）
@@ -102,10 +112,13 @@ $$
 #### 2. 被推薦用戶（URC 使用者）好處
 - **費用折扣**：用戶可享 **0%–25%** 鑄造費用折扣，根據推薦者嘅代幣持有比例。
 - **公式**：
-  $$
+
+$$
   \text{Actual Fee} = P_0 \cdot \left(1 + \frac{k}{d} - k\right)
   $$
+
 - 折扣率 $k$ 由推薦者嘅代幣持有比例 $r$ 決定：
+
   $$
   k =
   \begin{cases}
@@ -125,15 +138,19 @@ $$
 - 當前難度因子：$d = 1.2$
 
 **步驟 1：計算被推薦用戶嘅實際費用**：
+
 $$
 \text{Fee} = 0.1 \cdot \left(1 + \frac{0.1}{1.2} - 0.1\right) = 0.1 \cdot (1 + 0.0833 - 0.1) = 0.1 \cdot 0.9833 = 0.09833\ \text{ETH}
 $$
+
 - **費用節省**：
+
   $$
   P_0 - \text{Fee} = 0.1 - 0.09833 = 0.00167\ \text{ETH}
   $$
 
 **步驟 2：計算推薦者獎勵**：
+
 $$
 \text{Referrer Reward} = 0.2 \cdot 0.00167 = 0.000334\ \text{ETH}
 $$
@@ -191,9 +208,11 @@ URC 機制通過雙重調節調整淨鑄造費用：
 - **被推薦用戶**：支付較低費用（公式：$\text{Fee} = P_0 \cdot (1 + \frac{k}{d} - k)$）。
 - **推薦者**：獲得費用節省嘅 20%（公式：$0.2 \cdot P_0 \cdot k \cdot (1 - \frac{1}{d})$）。
 - **系統淨影響**：每次 URC 鑄造嘅淨收入：
+
   $$
   \text{NetFee} = \text{Fee} - \text{Referrer Reward} = P_0 \cdot \left(1 - 1.2k + \frac{1.2k}{d}\right)
   $$
+
   其中：
   - $P_0$：固定鑄造費用（標準=0.2 SOL，迷因=0.01 SOL）
   - $k$：折扣率（0%–25%）
@@ -201,10 +220,13 @@ URC 機制通過雙重調節調整淨鑄造費用：
 
 #### 2. 對總鑄造費用嘅影響
 原始總鑄造費用範圍（無 URC）：
+
 $$
 \text{TotalFee} \in \left[ \frac{P_0 T_0}{M_0} C_e,\ \frac{P_0 T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
+
 使用 URC 後，將 $P_0$ 替換為 $\text{NetFee}$，調整範圍為：
+
 $$
 \text{TotalFee}_{\text{URC}} \in \left[ \frac{P_0 (1 - 1.2k + \frac{1.2k}{d}) T_0}{M_0} C_e,\ \frac{P_0 (1 - 1.2k + \frac{1.2k}{d}) T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
@@ -220,28 +242,35 @@ $$
 
 #### 4. 極端情景計算 ($k=25\%$, $d→∞$)
 當 $k=25\%$ 同 $d→∞$ 時，總鑄造費用範圍變為：
+
 $$
 \text{TotalFee}_{\text{URC}} \in \left[ 0.7 \cdot \frac{P_0 T_0}{M_0} C_e,\ 0.7 \cdot \frac{P_0 T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
 
 ##### 4.1 標準模式
 - 淨費用：
+
   $$
   \text{NetFee} = P_0 \times (1 - 1.2k) = 0.2 \times (1 - 1.2 \times 0.25) = 0.14\ \text{SOL}
   $$
+
 - 流動性池影響：減少 30% SOL，(0.2 - 0.14) / 0.2 = 30%
 - 總鑄造費用範圍：
+
   $$
   [0.7 \times 1,000,\ 0.7 \times 4,457] = [700,\ 3,119.9]\ \text{SOL}
   $$
 
 ##### 4.2 迷因模式
 - 淨費用：
+
   $$
   \text{NetFee} = 0.01 \times 0.7 = 0.007\ \text{SOL}
   $$
+
 - 流動性池影響：減少 30%
 - 總鑄造費用範圍：
+
   $$
   [0.7 \times 250,\ 0.7 \times 1,114.25] = [175,\ 780]\ \text{SOL}
   $$
@@ -256,6 +285,7 @@ $$
 
 #### 6. 社群增長補償
 - 假設 URC 吸引 100% 更多參與者，實際流動性池規模變為：
+
   $$
   \text{ActualLP} = 0.7 \times 2 = 1.4 \times \text{Original Value}
   $$
@@ -282,9 +312,11 @@ URC 之間嘅主要區別如下：
 
 #### 2. 單個 URC 經濟價值公式
 單個 URC 嘅經濟價值（EV）可量化為：
+
 $$
 EV = \sum_{i=1}^{n} \left[ \frac{0.2P_0k_i(1-\frac{1}{d_i})}{(1+s)^t} \right]
 $$
+
 其中：
 - $k_i$ = min(25%, 推薦者持倉 / 當前流通量)
 - $s$ = 風險折扣率（建議 15%）
@@ -730,6 +762,7 @@ flipflop.plus 嘅 **代幣金庫**（項目庫戶）使用 **多層權限系統*
 - **流動性代幣（20%）**：  
   - 每次用戶掘金，**掘金池** 同時向用戶及代金池空投代幣，其中：
   - **代金池代幣數量**：
+
     $$
     \text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}
     $$
