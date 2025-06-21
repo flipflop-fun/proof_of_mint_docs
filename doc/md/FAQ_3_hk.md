@@ -397,6 +397,7 @@ $$
 ### D9. 同一個推薦者喺唔同項目嘅 URC 係咪一樣？
 #### 1. URC 核心生成機制
 - **基礎組件**：
+
 $$
 \text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
 $$
@@ -767,7 +768,7 @@ flipflop.plus 嘅 **代幣金庫**（項目庫戶）使用 **多層權限系統*
   - **代金池代幣數量**：
 
 $$
-\text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}
+\text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}}
 $$
 
 ---

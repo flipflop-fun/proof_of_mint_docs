@@ -12,11 +12,13 @@ flipflop.plus 的铸造成本通过**动态算法模型**实时计算。核心�
 
 #### 1. 核心公式
 **单次铸造的每代币成本**：
+
 $$
 p = \frac{P_0 \cdot d}{M_0 \cdot f^{(m-1)}}
 $$
 
 **总铸造成本**（完成目标里程碑）：
+
 $$
 \text{TotalCost} = \frac{P_0 \cdot T_0}{M_0} \cdot \sum_{i=1}^{C_e} d_i
 $$
@@ -35,20 +37,26 @@ $$
 #### 2. 逐步计算示例（标准模式）
 ##### 场景 1：按目标速度铸造（$d=1$）
 - **单次铸造成本**：
+
   $$
   p = \frac{0.2 \cdot 1}{10,000 \cdot 0.5^{0}} = \frac{0.2}{10,000} = 0.00002 \ \text{SOL/代币}
   $$
+
 - **总成本**：
+
   $$
   \text{TotalCost} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 \cdot 1 = 4 \cdot 250 = 1,000 \ \text{SOL}
   $$
 
 ##### 场景 2：快速铸造（$d$ 增加到 1.5）
 - **单次铸造成本**：
+
   $$
   p = \frac{0.2 \cdot 1.5}{10,000 \cdot 0.5^{0}} = 0.00003 \ \text{SOL/代币}
   $$
+
 - **总成本**：
+
   $$
   \text{TotalCost} = 4 \cdot 250 \cdot 1.5 = 1,500 \ \text{SOL}
   $$
@@ -92,9 +100,11 @@ $$
 #### 1. 推荐者（URC 提供者）的利益
 - **奖励机制**：推荐者赚取被推荐用户节省费用的 **20%**。
 - **公式**：
-  $$
-  \text{Referrer Reward} = 0.2 \cdot (P_0 - \text{Fee}) = 0.2 \cdot P_0 \cdot k \cdot \left(1 - \frac{1}{d}\right)
-  $$
+
+$$
+\text{Referrer Reward} = 0.2 \cdot (P_0 - \text{Fee}) = 0.2 \cdot P_0 \cdot k \cdot \left(1 - \frac{1}{d}\right)
+$$
+
   - $P_0$：固定铸造费用
   - $k$：折扣率（由推荐者的代币持有比例决定）
   - $d$：当前 FOMO 系数（难度因子）
@@ -102,21 +112,24 @@ $$
 #### 2. 被推荐用户（URC 使用者）的利益
 - **费用折扣**：用户享受基于推荐者代币持有比例的 **0%–25%** 铸造费用折扣。
 - **公式**：
-  $$
-  \text{Actual Fee} = P_0 \cdot \left(1 + \frac{k}{d} - k\right)
-  $$
+
+$$
+\text{Actual Fee} = P_0 \cdot \left(1 + \frac{k}{d} - k\right)
+$$
+
 - 折扣率 $k$ 由推荐者的代币持有比例 $r$ 决定：
-  $$
-  k =
-  \begin{cases}
-  0\% & r < 0.2\% \\
-  5\% & 0.2\% \leq r < 0.4\% \\
-  10\% & 0.4\% \leq r < 0.6\% \\
-  15\% & 0.6\% \leq r < 0.8\% \\
-  20\% & 0.8\% \leq r < 1\% \\
-  25\% & r \geq 1\%
-  \end{cases}
-  $$
+
+$$
+k =
+\begin{cases}
+0\% & r < 0.2\% \\
+5\% & 0.2\% \leq r < 0.4\% \\
+10\% & 0.4\% \leq r < 0.6\% \\
+15\% & 0.6\% \leq r < 0.8\% \\
+20\% & 0.8\% \leq r < 1\% \\
+25\% & r \geq 1\%
+\end{cases}
+$$
 
 #### 3. 示例计算
 **参数**：
@@ -125,15 +138,19 @@ $$
 - 当前难度因子：$d = 1.2$
 
 **步骤 1：计算被推荐用户的实际费用**：
+
 $$
 \text{Fee} = 0.1 \cdot \left(1 + \frac{0.1}{1.2} - 0.1\right) = 0.1 \cdot (1 + 0.0833 - 0.1) = 0.1 \cdot 0.9833 = 0.09833\ \text{ETH}
 $$
+
 - **费用节省**：
-  $$
-  P_0 - \text{Fee} = 0.1 - 0.09833 = 0.00167\ \text{ETH}
-  $$
+
+$$
+P_0 - \text{Fee} = 0.1 - 0.09833 = 0.00167\ \text{ETH}
+$$
 
 **步骤 2：计算推荐者的奖励**：
+
 $$
 \text{Referrer Reward} = 0.2 \cdot 0.00167 = 0.000334\ \text{ETH}
 $$
@@ -191,9 +208,11 @@ URC 机制通过双重调节调整净铸造费用：
 - **被推荐用户**：支付降低的费用（公式：$\text{Fee} = P_0 \cdot (1 + \frac{k}{d} - k)$）。
 - **推荐者**：获得费用节省的 20%（公式：$0.2 \cdot P_0 \cdot k \cdot (1 - \frac{1}{d})$）。
 - **系统净影响**：每次 URC 铸造的净收入：
-  $$
-  \text{NetFee} = \text{Fee} - \text{Referrer Reward} = P_0 \cdot \left(1 - 1.2k + \frac{1.2k}{d}\right)
-  $$
+
+$$
+\text{NetFee} = \text{Fee} - \text{Referrer Reward} = P_0 \cdot \left(1 - 1.2k + \frac{1.2k}{d}\right)
+$$
+
   其中：
   - $P_0$：固定铸造费用（标准=0.2 SOL，迷因=0.01 SOL）
   - $k$：折扣率（0%–25%）
@@ -201,10 +220,13 @@ URC 机制通过双重调节调整净铸造费用：
 
 #### 2. 对总铸造费用的影响
 原始总铸造费用范围（无 URC）：
+
 $$
 \text{TotalFee} \in \left[ \frac{P_0 T_0}{M_0} C_e,\ \frac{P_0 T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
+
 使用 URC 时，将 $P_0$ 替换为 $\text{NetFee}$，调整范围为：
+
 $$
 \text{TotalFee}_{\text{URC}} \in \left[ \frac{P_0 (1 - 1.2k + \frac{1.2k}{d}) T_0}{M_0} C_e,\ \frac{P_0 (1 - 1.2k + \frac{1.2k}{d}) T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
@@ -220,31 +242,38 @@ $$
 
 #### 4. 极端场景计算（$k=25\%$, $d→∞$）
 当 $k=25\%$ 且 $d→∞$ 时，总铸造费用范围变为：
+
 $$
 \text{TotalFee}_{\text{URC}} \in \left[ 0.7 \cdot \frac{P_0 T_0}{M_0} C_e,\ 0.7 \cdot \frac{P_0 T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
 
 ##### 4.1 标准模式
 - 净费用：
-  $$
-  \text{NetFee} = P_0 \times (1 - 1.2k) = 0.2 \times (1 - 1.2 \times 0.25) = 0.14\ \text{SOL}
-  $$
+
+$$
+\text{NetFee} = P_0 \times (1 - 1.2k) = 0.2 \times (1 - 1.2 \times 0.25) = 0.14\ \text{SOL}
+$$
+
 - 流动性池影响：SOL 减少 30%，(0.2 - 0.14) / 0.2 = 30%
 - 总铸造费用范围：
-  $$
-  [0.7 \times 1,000,\ 0.7 \times 4,457] = [700,\ 3,119.9]\ \text{SOL}
-  $$
+
+$$
+[0.7 \times 1,000,\ 0.7 \times 4,457] = [700,\ 3,119.9]\ \text{SOL}
+$$
 
 ##### 4.2 迷因模式
 - 净费用：
-  $$
-  \text{NetFee} = 0.01 \times 0.7 = 0.007\ \text{SOL}
-  $$
+
+$$
+\text{NetFee} = 0.01 \times 0.7 = 0.007\ \text{SOL}
+$$
+
 - 流动性池影响：减少 30%
 - 总铸造费用范围：
-  $$
-  [0.7 \times 250,\ 0.7 \times 1,114.25] = [175,\ 780]\ \text{SOL}
-  $$
+
+$$
+[0.7 \times 250,\ 0.7 \times 1,114.25] = [175,\ 780]\ \text{SOL}
+$$
 
 #### 5. 极端场景的经济影响比较
 | 影响维度 | 标准模式 | 迷因模式 |
@@ -256,9 +285,10 @@ $$
 
 #### 6. 社区增长补偿
 - 假设 URC 吸引 100% 更多的参与者，实际流动性池规模变为：
-  $$
-  \text{ActualLP} = 0.7 \times 2 = 1.4 \times \text{Original Value}
-  $$
+
+$$
+\text{ActualLP} = 0.7 \times 2 = 1.4 \times \text{Original Value}
+$$
 
 #### 7. 结论
 在极端情况下，URC 机制将两种模式的总费用范围降低 **最多 30%**，但通过以下方式缓解：
@@ -282,9 +312,11 @@ URC 的关键区别如下：
 
 #### 2. 单个 URC 的经济价值公式
 单个 URC 的经济价值（EV）可量化为：
+
 $$
 EV = \sum_{i=1}^{n} \left[ \frac{0.2P_0k_i(1-\frac{1}{d_i})}{(1+s)^t} \right]
 $$
+
 其中：
 - $k_i$ = min(25%, 推荐者持仓 / 当前流通量)
 - $s$ = 风险折扣率（建议 15%）
@@ -365,6 +397,7 @@ $$
 ### D9. 同一推荐者在不同项目中的 URC 相同吗？
 #### 1. URC 核心生成机制
 - **基础组件**：
+
 $$
 \text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
 $$
@@ -736,9 +769,9 @@ flipflop.plus 的 **代币金库**（项目国库）采用 **多层权限系统*
 - **流动性代币（20%）**：
   - 每次用户铸造，**铸造代币金库** 同时向用户和代币金库空投代币，其中：
   - **代币金库代币量**：
-    $$
-    \text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}
-    $$
+$$
+\text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}
+$$
 
 ---
 
