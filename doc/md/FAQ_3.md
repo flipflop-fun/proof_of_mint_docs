@@ -206,7 +206,7 @@ This mechanism is the first decentralized solution to deeply integrate **holding
 #### 1. Core Mechanism Formulas
 The URC mechanism adjusts net minting fees through dual regulation:
 - **Referred User**: Pays reduced fees (Formula: $\text{Fee} = P_0 \cdot (1 + \frac{k}{d} - k)$ ).
-- **Referrer**: Receives 20% of fee savings (Formula: $0.2 \cdot P_0 \cdot k \cdot (1 - \frac{1}{d})$).
+- **Referrer**: Receives 20% of fee savings (Formula: $0.2 \cdot P_0 \cdot k \cdot (1 - \frac{1}{d})$ ).
 - **System Net Impact**: Net revenue per URC mint:
 
 $$
@@ -867,7 +867,7 @@ flipflop.plus uses a **dual-risk-control mechanism** to prevent VM misuse, ensur
 
 #### 2. 24-Hour Transaction Limits
 - **Quota Control**:  
-  issuers can set a **daily fund operation cap** for VMs (e.g., max $10% of vault SOL per day).
+  issuers can set a **daily fund operation cap** for VMs (e.g., max 10% of vault SOL per day).
 - **Trigger Block**:  
   smart contracts attempts exceeding the limit are automatically rejected.
 
