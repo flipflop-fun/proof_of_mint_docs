@@ -397,9 +397,10 @@ Users can check via the app or Solana explorer:
 ### D9. Are URCs the Same for the Same Referrer Across Different Projects?
 #### 1. URC Core Generation Mechanism
 - **Base Components**:
-  ```math
-  \text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
-  ```
+$$
+\text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
+$$
+
   Where:
   - $\oplus$ denotes the connector "_"
   - $\text{Shorten}()$ takes the first and last 8 characters of the public key
@@ -453,11 +454,10 @@ In the app, navigate to: **Menu → Tools → My URC**, select a promoted token,
 - **Refund Deduction Source**: The referrer’s reward is deducted from the refund applicant’s principal.
 
 #### 2. Funds Flow Model
-```math
-\begin{aligned}
-&\text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee} \\
-\end{aligned}
-```
+$$
+\text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee} \\
+$$
+
 If no discount URC was used during minting, no RewardFee is deducted.
 
 ---
@@ -489,9 +489,10 @@ Refund fees consist of two components:
 - **URC Reward Return** (if a referral code was used): Deducts the referrer’s earned reward.
 
 **Calculation Formula**:
-```math
+$$
 \text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee}
-```
+$$
+
 Where:
 - `MintFee`: Initial minting fee paid by the user (e.g., 0.1 SOL), cumulative for multiple mints.
 - `RewardFee`: Referrer’s cumulative reward from URC usage during minting (0 if no URC used).

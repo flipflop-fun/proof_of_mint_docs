@@ -397,9 +397,10 @@ $$
 ### D9. 同一個推薦者喺唔同項目嘅 URC 係咪一樣？
 #### 1. URC 核心生成機制
 - **基礎組件**：
-  ```math
-  \text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
-  ```
+$$
+\text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
+$$
+
   其中：
   - $\oplus$ 表示連接符 "_"
   - $\text{Shorten}()$ 取公鑰嘅首 8 個同末 8 個字符
@@ -453,11 +454,11 @@ $$
 - **退款扣除來源**：從退款申請人嘅本金中扣除推薦者獎勵。
 
 #### 2. 資金流動模型
-```math
-\begin{aligned}
-&\text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee} \\
-\end{aligned}
-```
+
+$$
+\text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee}
+$$
+
 如果鑄造時無使用折扣 URC，則無扣除 RewardFee。
 
 ---
@@ -489,9 +490,11 @@ $$
 - **URC 獎勵回扣**（若使用推薦碼）：扣除推薦者獲得嘅獎勵。
 
 **計算公式**：
-```math
+
+$$
 \text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee}
-```
+$$
+
 其中：
 - `MintFee`：用戶支付嘅初期鑄造費用（例如，多次鑄造累計 0.3 SOL）。
 - `RewardFee`：鑄造時使用 URC 嘅推薦者累計獎勵（無 URC 則為 0）。

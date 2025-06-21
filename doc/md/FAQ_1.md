@@ -180,9 +180,10 @@ This formula is a geometric series summation, reflecting the gradual reduction i
 
 #### Formula 2: Maximum Supply
 If the number of Milestones ($E$) approaches infinity, the total supply converges to a theoretical **Max Supply**:
-$
+
+$$
 \text{Max Supply} = \frac{C \cdot T_0}{1 - f}
-$
+$$
 
 #### Example 1: Standard Token
 Parameters:
@@ -191,9 +192,10 @@ Parameters:
 - $f = 0.5$ (50% reduction per Milestone)
 
 Max Supply:
-$
+
+$$
 \text{Max Supply} = \frac{250 \cdot 200,000}{1 - 0.50} = \frac{50,000,000}{0.50} = 100,000,000 \text{ tokens}
-$
+$$
 
 #### Example 2: Meme Token
 Parameters:
@@ -202,9 +204,10 @@ Parameters:
 - $f = 0.75$ (25% reduction per Milestone)
 
 Max Supply:
-$
+
+$$
 \text{Max Supply} = \frac{250 \cdot 1,000,000}{1 - 0.75} = \frac{250,000,000}{0.25} = 1,000,000,000 \text{ tokens}
-$
+$$
 
 **Summary**: On flipflop.plus, a **meme token** has a max supply of **1,000,000,000 (1 billion)** tokens, and a **standard token** has a max supply of **100,000,000 (100 million)** tokens.
 
@@ -324,9 +327,11 @@ Minting costs on flipflop.plus are determined by the **dynamic difficulty mechan
 
 #### 1. Core Formula
 **Cost per token = Fixed minting fee / Actual tokens minted**
-$
+
+$$
 p = \frac{P_0}{M} = \frac{P_0 \cdot d}{M_0 \cdot f^{(m-1)}}
-$
+$$
+
 - **Parameters**:
   | Symbol | Definition                     | Example Value |
   |--------|--------------------------------|---------------|
@@ -428,9 +433,11 @@ To understand **Graduation**, consider flipflop.plus’s token issuance as a **s
 Minting costs on flipflop.plus exhibit a **unidirectional increase** due to the combined effect of the **FOMO coefficient** and **Milestone decay mechanism**.
 
 #### 1. Price Formula and Growth Factors
-$
+
+$$
 p = \frac{P_0 \cdot d}{M_0 \cdot f^{(m-1)}}
-$
+$$
+
 - **Variables**:
   | Variable | Definition              | Direction | Price Impact        |
   |----------|------------------------|-----------|--------------------|

@@ -377,27 +377,27 @@ $$
 其中 $C_e = E \cdot C = 250$
 - **下限（无 FOMO 增加）**：
 
-  $$
-  \text{TotalFee}_{\text{min}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 = 4 \cdot 250 = 1,000 \ \text{SOL}
-  $$
+$$
+\text{TotalFee}_{\text{min}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 = 4 \cdot 250 = 1,000 \ \text{SOL}
+$$
 
 - **上限（FOMO 每个检查点增加 1%）**：
-  $$
-  \text{TotalFee}_{\text{max}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 101 \cdot (1.01^{250} - 1) \approx 4,457 \ \text{SOL}
-  $$
+$$
+\text{TotalFee}_{\text{max}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 101 \cdot (1.01^{250} - 1) \approx 4,457 \ \text{SOL}
+$$
 
 ##### 步骤 3：计算初始价格范围
 - **最低价格 ($P_{\text{low}}$)**：
 
-  $$
-  P_{\text{low}} = \frac{0.90 \cdot \text{TotalFee}_{\text{min}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 1,000}{12,500,000} \approx 0.000072 \ \text{SOL/代币}
-  $$
+$$
+P_{\text{low}} = \frac{0.90 \cdot \text{TotalFee}_{\text{min}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 1,000}{12,500,000} \approx 0.000072 \ \text{SOL/代币}
+$$
 
 - **最高价格 ($P_{\text{high}}$)**：
 
-  $$
-  P_{\text{high}} = \frac{0.90 \cdot \text{TotalFee}_{\text{max}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 4,457}{12,500,000} \approx 0.000321 \ \text{SOL/代币}
-  $$
+$$
+P_{\text{high}} = \frac{0.90 \cdot \text{TotalFee}_{\text{max}}}{\text{InitLiquidity}} = \frac{0.90 \cdot 4,457}{12,500,000} \approx 0.000321 \ \text{SOL/代币}
+$$
 
 #### 3. 范围值原因
 1. **FOMO 系数动态**：

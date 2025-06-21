@@ -365,9 +365,10 @@ $$
 ### D9. 同一推荐者在不同项目中的 URC 相同吗？
 #### 1. URC 核心生成机制
 - **基础组件**：
-  ```math
-  \text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
-  ```
+$$
+\text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
+$$
+
   其中：
   - $\oplus$ 表示连接符 "_"
   - $\text{Shorten}()$ 取公钥的首尾 8 个字符
@@ -421,11 +422,10 @@ $$
 - **退款扣除来源**：推荐者奖励从退款申请人的本金中扣除。
 
 #### 2. 资金流动模型
-```math
-\begin{aligned}
-&\text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee} \\
-\end{aligned}
-```
+$$
+\text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee}
+$$
+
 如果铸造时未使用折扣 URC，则不扣除 RewardFee。
 
 ---
@@ -457,9 +457,11 @@ $$
 - **URC 奖励返还**（如果使用了推荐代码）：扣除推荐者获得的奖励。
 
 **计算公式**：
-```math
+
+$$
 \text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee}
-```
+$$
+
 其中：
 - `MintFee`：用户支付的初始铸造费用（例如，0.1 SOL），多次铸造累计。
 - `RewardFee`：铸造时使用的 URC 推荐者累计奖励（无 URC 时为 0）。
@@ -747,9 +749,11 @@ flipflop.plus 的 **代币金库**（项目国库）采用 **多层权限系统*
 2. **URC 推荐奖励（0–5%）**：如果使用了推荐代码，按规则扣除（最高 5%）。
 
 #### 2. 计算公式
-```math
+
+$$
 \text{Stored SOL} = \text{User Minting Fee} - \text{Protocol Fee (5\%)} - \text{URC Reward (0\%–5\%)}
-```
+$$
+
 - **示例**（标准模式，单次铸造费用 0.2 SOL）：
   - **无 URC**：`0.2 SOL - 0.01 SOL (5%) = 0.19 SOL` 存入金库。
   - **有 URC（3% 奖励）**：`0.2 SOL - 0.01 SOL - (0.006%) SOL = (0.1843% SOL) 存入金库。
