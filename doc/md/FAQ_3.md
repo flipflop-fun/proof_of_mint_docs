@@ -205,7 +205,7 @@ This mechanism is the first decentralized solution to deeply integrate **holding
 ### D4. How Does URC Impact Total Minting Fees at Graduation?
 #### 1. Core Mechanism Formulas
 The URC mechanism adjusts net minting fees through dual regulation:
-- **Referred User**: Pays reduced fees (Formula: $\text{Fee} = P_0 \cdot (1 + \frac{k}{d} - k)$).
+- **Referred User**: Pays reduced fees (Formula: $\text{Fee} = P_0 \cdot (1 + \frac{k}{d} - k)$ ).
 - **Referrer**: Receives 20% of fee savings (Formula: $0.2 \cdot P_0 \cdot k \cdot (1 - \frac{1}{d})$).
 - **System Net Impact**: Net revenue per URC mint:
 
@@ -397,6 +397,7 @@ Users can check via the app or Solana explorer:
 ### D9. Are URCs the Same for the Same Referrer Across Different Projects?
 #### 1. URC Core Generation Mechanism
 - **Base Components**:
+
 $$
 \text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
 $$
@@ -489,6 +490,7 @@ Refund fees consist of two components:
 - **URC Reward Return** (if a referral code was used): Deducts the referrer’s earned reward.
 
 **Calculation Formula**:
+
 $$
 \text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee}
 $$
@@ -769,7 +771,7 @@ Tokens in the Token Vault are generated via a **pre-minting mechanism**:
   - **Token Vault Token Amount**:
 
 $$
-\text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}
+\text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}}
 $$
 
 ---
