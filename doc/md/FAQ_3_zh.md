@@ -38,28 +38,28 @@ $$
 ##### 场景 1：按目标速度铸造（$d=1$）
 - **单次铸造成本**：
 
-  $$
-  p = \frac{0.2 \cdot 1}{10,000 \cdot 0.5^{0}} = \frac{0.2}{10,000} = 0.00002 \ \text{SOL/代币}
-  $$
+$$
+p = \frac{0.2 \cdot 1}{10,000 \cdot 0.5^{0}} = \frac{0.2}{10,000} = 0.00002 \ \text{SOL/代币}
+$$
 
 - **总成本**：
 
-  $$
-  \text{TotalCost} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 \cdot 1 = 4 \cdot 250 = 1,000 \ \text{SOL}
-  $$
+$$
+\text{TotalCost} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 \cdot 1 = 4 \cdot 250 = 1,000 \ \text{SOL}
+$$
 
 ##### 场景 2：快速铸造（$d$ 增加到 1.5）
 - **单次铸造成本**：
 
-  $$
-  p = \frac{0.2 \cdot 1.5}{10,000 \cdot 0.5^{0}} = 0.00003 \ \text{SOL/代币}
-  $$
+$$
+p = \frac{0.2 \cdot 1.5}{10,000 \cdot 0.5^{0}} = 0.00003 \ \text{SOL/代币}
+$$
 
 - **总成本**：
 
-  $$
-  \text{TotalCost} = 4 \cdot 250 \cdot 1.5 = 1,500 \ \text{SOL}
-  $$
+$$
+\text{TotalCost} = 4 \cdot 250 \cdot 1.5 = 1,500 \ \text{SOL}
+$$
 
 #### 3. 影响成本的关键因素
 | 因素 | 对成本的影响 | 示例 |
@@ -769,6 +769,7 @@ flipflop.plus 的 **代币金库**（项目国库）采用 **多层权限系统*
 - **流动性代币（20%）**：
   - 每次用户铸造，**铸造代币金库** 同时向用户和代币金库空投代币，其中：
   - **代币金库代币量**：
+
 $$
 \text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}
 $$
