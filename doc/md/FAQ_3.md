@@ -35,7 +35,7 @@ $$
 | $C_e$ | Total number of Checkpoints (target Milestone) | 250 |
 
 #### 2. Step-by-Step Calculation Examples (Standard Mode)
-##### Scenario 1: Minting at Target Speed ($d=1$)
+##### Scenario 1: Minting at Target Speed ( $d=1$ )
 - **Single mint cost**:
 
 $$
@@ -48,7 +48,7 @@ $$
 \text{TotalCost} = \frac{0.2 \cdot 200,000}{10,000} \cdot 250 \cdot 1 = 4 \cdot 250 = 1,000 \ \text{SOL}
 $$
 
-##### Scenario 2: Rapid Minting ($d$ increases to 1.5)
+##### Scenario 2: Rapid Minting ( $d$ increases to 1.5)
 - **Single mint cost**:
 
 $$
@@ -65,7 +65,7 @@ $$
 | Factor | Impact on Cost | Example |
 |----------------|----------------|----------------|
 | **Minting Speed** | Faster speed → $d$ increases → Higher cost | 50% speed increase → 50% cost increase |
-| **Milestone Decay** | New Milestone → $M_0$ decreases → Exponential cost increase | 2nd Milestone cost ×2 ($f=0.5$) |
+| **Milestone Decay** | New Milestone → $M_0$ decreases → Exponential cost increase | 2nd Milestone cost ×2 ( $f=0.5$ ) |
 
 ---
 
@@ -156,13 +156,13 @@ $$
 $$
 
 #### 4. Comparison Across Scenarios
-| Scenario | Difficulty ($d$) | Discount Rate ($k$) | Actual Fee (ETH) | Referrer Reward (ETH) |
+| Scenario | Difficulty ( $d$ ) | Discount Rate ( $k$ ) | Actual Fee (ETH) | Referrer Reward (ETH) |
 |------------------|------------------|--------------------|------------------|----------------------|
-| No Discount ($k=0\%$) | 1.2 | 0% | 0 | 0 (no reward without discount) |
+| No Discount ( $k=0\%$ ) | 1.2 | 0% | 0 | 0 (no reward without discount) |
 | Standard Example | 1.2 | 10% | 0.09833 | 0.000334 |
-| High Difficulty ($d=2.0$) | 2.0 | 10% | 0.1*(1+0.1/2-0.1)=0.095 | 0.2*(0.1-0.095)=0.001 |
-| Max Discount ($k=25\%$) | 1.0 | 25% | 0.1*(1+0.25/1-0.25)=0.1 | 0 (no reward without difficulty) |
-| Extreme Difficulty ($d=100.0$) | 100.0 | 25% | 0.1*(1+0.25/100-0.25)=0.07525 | 0.2*(0.1-0.07525)=0.00495 |
+| High Difficulty ( $d=2.0$ ) | 2.0 | 10% | 0.1*(1+0.1/2-0.1)=0.095 | 0.2*(0.1-0.095)=0.001 |
+| Max Discount ( $k=25\%$ ) | 1.0 | 25% | 0.1*(1+0.25/1-0.25)=0.1 | 0 (no reward without difficulty) |
+| Extreme Difficulty ( $d=100.0$ ) | 100.0 | 25% | 0.1*(1+0.25/100-0.25)=0.07525 | 0.2*(0.1-0.07525)=0.00495 |
 
 #### 5. Conclusions
 **5.1. Referrer Benefits**:
