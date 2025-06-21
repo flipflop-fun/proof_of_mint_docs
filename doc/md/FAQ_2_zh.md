@@ -382,6 +382,7 @@ $$
 $$
 
 - **上限（FOMO 每个检查点增加 1%）**：
+
 $$
 \text{TotalFee}_{\text{max}} = \frac{0.2 \cdot 200,000}{10,000} \cdot 101 \cdot (1.01^{250} - 1) \approx 4,457 \ \text{SOL}
 $$

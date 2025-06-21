@@ -771,7 +771,7 @@ flipflop.plus 的 **代币金库**（项目国库）采用 **多层权限系统*
   - **代币金库代币量**：
 
 $$
-\text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}
+\text{TokenVault Tokens} = \frac{\text{User Minted Tokens}}{1 - \text{Liquidity Ratio (20\%)}}
 $$
 
 ---
