@@ -1148,10 +1148,12 @@ flipflop.plus的代币价格和总铸造费用范围通过**流动性池初始�
 
 #### **1. 核心公式与参数**  
 ##### **流动性池初始化价格公式**  
-根据论文定义，代币初始价格由注入流动性池的资金和代币量决定：  
+根据论文定义，代币初始价格由注入流动性池的资金和代币量决定：
+
 $$
 \text{Price} = \frac{0.90 \cdot \text{TotalFee}}{\text{InitLiquidity}}
-$$  
+$$
+
 - **TotalFee**：铸造总费用（扣除协议费5%和推荐费0-5%后，90-95%注入流动性池，此处取90%下限）  
 - **InitLiquidity**：流动性池初始代币量  
 
@@ -1841,7 +1843,7 @@ $$
 \text{TotalFee} \in \left[ \frac{P_0 T_0}{M_0} C_e,\ \frac{P_0 T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
 $$
 
-引入URC后，需将$P_0$替换为$\text{NetFee}$，修正范围为：
+引入URC后，需将 $P_0$ 替换为 $\text{NetFee}$，修正范围为：
 
 $$
 \text{TotalFee}_{\text{URC}} \in \left[ \frac{P_0 (1 - 1.2k + \frac{1.2k}{d}) T_0}{M_0} C_e,\ \frac{P_0 (1 - 1.2k + \frac{1.2k}{d}) T_0}{M_0} \cdot 101 \cdot (1.01^{C_e} - 1) \right]
