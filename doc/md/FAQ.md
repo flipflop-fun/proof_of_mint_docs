@@ -405,8 +405,8 @@ $$
 
 #### **2. 计算步骤**
 1. **确定基础铸造量**  
-   当前Milestone的基础铸造量 = \( M_0 \cdot f^{(m-1)} \)  
-   （例如：第2个Milestone时，\( M_0=100, f=0.75 → 100×0.75=75 \)代币）
+   当前Milestone的基础铸造量 = $M_0 \cdot f^{(m-1)}$
+   （例如：第2个Milestone时， $M_0=100, f=0.75 → 100×0.75=75$ 代币）
 
 2. **计算实际获得代币**  
    实际获得代币 = 基础铸造量 / FOMO系数  
@@ -2020,9 +2020,11 @@ $$
 
 #### 1. URC核心生成机制
 - **基础构成要素**：
-  ```math
-  \text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
-  ```
+
+$$
+\text{URC}_{\text{default}} = \text{TokenSymbol} \oplus \text{Shorten}(\text{ReferrerPubkey})
+$$
+
   其中：
   - $\oplus$表示连接符"_"
   - $\text{Shorten}()$取公钥首尾各8字符
@@ -2074,11 +2076,11 @@ $$
 - **Refund扣减来源**：从退款申请人的本金中优先扣除应返还的推荐奖励
 
 #### 2. 资金流模型
-```math
-\begin{aligned}
-&\text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee} \\
-\end{aligned}
-```
+
+$$
+\text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee}
+$$
+
 如果铸造时没有使用折扣URC，则不会扣除RewardFee。
 
 ****************************************************************
@@ -2110,9 +2112,11 @@ Refund时的扣费主要包括两部分：
 - **URC奖励返还**（如果铸造时使用了推荐码）：需扣除推荐人已获得的奖励。
 
 **计算公式**：
-```math
+
+$$
 \text{RefundAmount} = \text{MintFee} - \text{RewardFee} - \text{RefundFee}
-```
+$$
+
 其中：
 - `MintFee`：用户最初支付的铸造费用（如0.1 SOL），多次铸造会累计。
 - `RewardFee`：铸造时使用URC推荐码产生的推荐人累计奖励（若未使用URC，此项为0）。
