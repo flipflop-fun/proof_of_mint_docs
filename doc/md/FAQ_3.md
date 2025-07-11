@@ -94,7 +94,6 @@ If the code reaches its usage limit (50 times), click the **"Activate"** button 
 Users who mint with a URC and referrers who promote URCs can gain **direct and indirect benefits** as outlined below.
 
 ---
-
 ### D3. Benefits and Calculation Formulas for URC Referrers and Users
 
 #### 1. Benefits for Referrers (URC Providers)
@@ -119,17 +118,14 @@ $$
 
 - Discount rate $k$ is determined by the referrer’s token holding ratio $r$:
 
-$$
-k =
-\begin{cases}
-0\% & r < 0.2\% \\
-5\% & 0.2\% \leq r < 0.4\% \\
-10\% & 0.4\% \leq r < 0.6\% \\
-15\% & 0.6\% \leq r < 0.8\% \\
-20\% & 0.8\% \leq r < 1\% \\
-25\% & r \geq 1\%
-\end{cases}
-$$
+| k | r range |
+|---|------|
+| 0% | r < 0.2% |
+| 5% | 0.2% ≤ r < 0.4% |
+| 10% | 0.4% ≤ r < 0.6% |
+| 15% | 0.6% ≤ r < 0.8% |
+| 20% | 0.8% ≤ r < 1% |
+| 25% | r ≥ 1% |
 
 #### 3. Example Calculation
 **Parameters**:
